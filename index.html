@@ -46,7 +46,7 @@
 						<strong class="title">CALL NOW 800-940-3002</strong>
 						<span class="sub-title">OR START HERE TO GET GREAT RATES</span>
 					</div>
-					<div class="text-holder">
+					<div id="hideStep1" class="text-holder">
 						<div class="dropdown">
 							<strong class="label">Coverage amount</strong>
 						    <a href="#" data-toggle="dropdown" class="dropdown-toggle">$500,000</a>
@@ -71,7 +71,7 @@
 						        <li><a href="#">Tennessee</a></li>
 						    </ul>
 						</div>
-						<a href="#" id="hideButton1" onclick="hideStep1ShowStep2()" class="btn btn-danger btn-lg">start here</a>
+						<a href="#" onclick="hideStep1ShowStep2()" class="btn btn-danger btn-lg">start here</a>
 					</div>
 				</div>
 
@@ -98,11 +98,8 @@
 	</div>
 	<script type="text/javascript">
 		function hideStep1ShowStep2() {
-			var steps = document.getElementById('hideButton1');
-			console.log("steps = " + steps);
-			if (steps.style.display === 'none') {
-				steps.style.display = 'block';
-			} else {
+			var steps = document.getElementById('hideStep1');
+			if (steps.style.display != 'none') {
 				steps.style.display = 'none';
 			}
 		}
